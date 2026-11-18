@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tasklane - Task Manager</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>Tasklane</h1>
+            <p>Real-Time Team Task Manager</p>
+
+            <div class="connection">
+                <span class="dot"></span>
+                <span id="status">Connecting...</span>
+            </div>
+        </header>
+
+        <section class="add-section">
+
+            <h2>Add New Task</h2>
+
+            <form id="task-form">
+
+                <input
+                    type="text"
+                    id="title"
+                    placeholder="Enter task title"
+                    required
+                >
+
+                <input
+                    type="text"
+                    id="person"
+                    placeholder="Assigned person"
+                    required
+                >
+
+                <button type="submit">+ Add Task</button>
+
+            </form>
+
+        </section>
+
+        <section class="board">
+
+            <div class="column">
+
+                <h2>To Do <span id="todo-count">0</span></h2>
+
+                <div id="todo" class="task-list"></div>
+
+            </div>
+
+            <div class="column">
+
+                <h2>Doing <span id="doing-count">0</span></h2>
+
+                <div id="doing" class="task-list"></div>
+
+            </div>
+
+            <div class="column">
+
+                <h2>Done <span id="done-count">0</span></h2>
+
+                <div id="done" class="task-list"></div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+    <script src="app.js"></script>
+
+</body>
+</html>
